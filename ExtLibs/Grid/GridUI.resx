@@ -724,10 +724,10 @@
     <value>Bottom</value>
   </data>
   <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 457</value>
+    <value>0, 388</value>
   </data>
   <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>755, 80</value>
+    <value>667, 80</value>
   </data>
   <data name="groupBox5.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -2776,7 +2776,7 @@
     <value>NoControl</value>
   </data>
   <data name="BUT_Accept.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 479</value>
+    <value>84, 410</value>
   </data>
   <data name="BUT_Accept.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -2806,7 +2806,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabSimple.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 511</value>
+    <value>245, 442</value>
   </data>
   <data name="tabSimple.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2830,10 +2830,10 @@
     <value>Right</value>
   </data>
   <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>755, 0</value>
+    <value>667, 0</value>
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 537</value>
+    <value>253, 468</value>
   </data>
   <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -2857,7 +2857,7 @@
     <value>0, 0</value>
   </data>
   <data name="map.Size" type="System.Drawing.Size, System.Drawing">
-    <value>704, 457</value>
+    <value>616, 388</value>
   </data>
   <data name="map.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2881,13 +2881,13 @@
     <value>NoControl</value>
   </data>
   <data name="TRK_zoom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>710, 0</value>
+    <value>622, 0</value>
   </data>
   <data name="TRK_zoom.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Vertical</value>
   </data>
   <data name="TRK_zoom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 457</value>
+    <value>45, 388</value>
   </data>
   <data name="TRK_zoom.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
@@ -2908,7 +2908,7 @@
     <value>True</value>
   </metadata>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1008, 537</value>
+    <value>920, 468</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Survey (Grid)</value>
