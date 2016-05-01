@@ -117,22 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TUNE_LOW.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="TUNE_LOW.Location" type="System.Drawing.Point, System.Drawing">
-    <value>394, 263</value>
+    <value>394, 291</value>
   </data>
   <data name="TUNE_LOW.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 20</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="TUNE_LOW.TabIndex" type="System.Int32, mscorlib">
-    <value>41</value>
+    <value>16</value>
   </data>
   <data name="&gt;&gt;TUNE_LOW.Name" xml:space="preserve">
     <value>TUNE_LOW</value>
   </data>
   <data name="&gt;&gt;TUNE_LOW.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;TUNE_LOW.Parent" xml:space="preserve">
     <value>$this</value>
@@ -140,20 +143,23 @@
   <data name="&gt;&gt;TUNE_LOW.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="TUNE_HIGH.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="TUNE_HIGH.Location" type="System.Drawing.Point, System.Drawing">
-    <value>484, 263</value>
+    <value>484, 291</value>
   </data>
   <data name="TUNE_HIGH.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 20</value>
   </data>
   <data name="TUNE_HIGH.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
+    <value>17</value>
   </data>
   <data name="&gt;&gt;TUNE_HIGH.Name" xml:space="preserve">
     <value>TUNE_HIGH</value>
   </data>
   <data name="&gt;&gt;TUNE_HIGH.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;TUNE_HIGH.Parent" xml:space="preserve">
     <value>$this</value>
@@ -161,20 +167,23 @@
   <data name="&gt;&gt;TUNE_HIGH.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="TUNE.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="TUNE.Location" type="System.Drawing.Point, System.Drawing">
-    <value>418, 235</value>
+    <value>418, 263</value>
   </data>
   <data name="TUNE.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 21</value>
   </data>
   <data name="TUNE.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
+    <value>14</value>
   </data>
   <data name="&gt;&gt;TUNE.Name" xml:space="preserve">
     <value>TUNE</value>
   </data>
   <data name="&gt;&gt;TUNE.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkComboBox, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;TUNE.Parent" xml:space="preserve">
     <value>$this</value>
@@ -182,26 +191,32 @@
   <data name="&gt;&gt;TUNE.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <data name="CH7_OPT.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="CH7_OPT.Location" type="System.Drawing.Point, System.Drawing">
-    <value>418, 287</value>
+    <value>418, 315</value>
   </data>
   <data name="CH7_OPT.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 21</value>
   </data>
   <data name="CH7_OPT.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
+    <value>19</value>
   </data>
   <data name="&gt;&gt;CH7_OPT.Name" xml:space="preserve">
     <value>CH7_OPT</value>
   </data>
   <data name="&gt;&gt;CH7_OPT.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkComboBox, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CH7_OPT.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CH7_OPT.ZOrder" xml:space="preserve">
     <value>13</value>
+  </data>
+  <data name="THR_RATE_P.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="THR_RATE_P.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 13</value>
@@ -210,13 +225,13 @@
     <value>78, 20</value>
   </data>
   <data name="THR_RATE_P.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;THR_RATE_P.Name" xml:space="preserve">
     <value>THR_RATE_P</value>
   </data>
   <data name="&gt;&gt;THR_RATE_P.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;THR_RATE_P.Parent" xml:space="preserve">
     <value>groupBox5</value>
@@ -235,7 +250,7 @@
     <value>14, 13</value>
   </data>
   <data name="label25.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>0</value>
   </data>
   <data name="label25.Text" xml:space="preserve">
     <value>P</value>
@@ -253,13 +268,13 @@
     <value>1</value>
   </data>
   <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 188</value>
+    <value>183, 216</value>
   </data>
   <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 70</value>
   </data>
   <data name="groupBox5.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
+    <value>10</value>
   </data>
   <data name="groupBox5.Text" xml:space="preserve">
     <value>Throttle Rate</value>
@@ -289,7 +304,7 @@
     <value>154, 17</value>
   </data>
   <data name="CHK_lockrollpitch.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
+    <value>4</value>
   </data>
   <data name="CHK_lockrollpitch.Text" xml:space="preserve">
     <value>Lock Pitch and Roll Values</value>
@@ -306,6 +321,9 @@
   <data name="&gt;&gt;CHK_lockrollpitch.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
+  <data name="WPNAV_SPEED_UP.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="WPNAV_SPEED_UP.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 60</value>
   </data>
@@ -313,13 +331,13 @@
     <value>78, 20</value>
   </data>
   <data name="WPNAV_SPEED_UP.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;WPNAV_SPEED_UP.Name" xml:space="preserve">
     <value>WPNAV_SPEED_UP</value>
   </data>
   <data name="&gt;&gt;WPNAV_SPEED_UP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;WPNAV_SPEED_UP.Parent" xml:space="preserve">
     <value>groupBox4</value>
@@ -337,7 +355,7 @@
     <value>68, 17</value>
   </data>
   <data name="label27.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+    <value>4</value>
   </data>
   <data name="label27.Text" xml:space="preserve">
     <value>Speed Up</value>
@@ -354,6 +372,9 @@
   <data name="&gt;&gt;label27.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="WPNAV_LOIT_SPEED.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="WPNAV_LOIT_SPEED.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 107</value>
   </data>
@@ -361,13 +382,13 @@
     <value>78, 20</value>
   </data>
   <data name="WPNAV_LOIT_SPEED.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;WPNAV_LOIT_SPEED.Name" xml:space="preserve">
     <value>WPNAV_LOIT_SPEED</value>
   </data>
   <data name="&gt;&gt;WPNAV_LOIT_SPEED.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;WPNAV_LOIT_SPEED.Parent" xml:space="preserve">
     <value>groupBox4</value>
@@ -385,7 +406,7 @@
     <value>72, 18</value>
   </data>
   <data name="label9.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>8</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
     <value>Loiter Speed</value>
@@ -402,6 +423,9 @@
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="WPNAV_SPEED_DN.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="WPNAV_SPEED_DN.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 84</value>
   </data>
@@ -409,13 +433,13 @@
     <value>78, 20</value>
   </data>
   <data name="WPNAV_SPEED_DN.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;WPNAV_SPEED_DN.Name" xml:space="preserve">
     <value>WPNAV_SPEED_DN</value>
   </data>
   <data name="&gt;&gt;WPNAV_SPEED_DN.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;WPNAV_SPEED_DN.Parent" xml:space="preserve">
     <value>groupBox4</value>
@@ -433,7 +457,7 @@
     <value>68, 17</value>
   </data>
   <data name="label13.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>6</value>
   </data>
   <data name="label13.Text" xml:space="preserve">
     <value>Speed Dn</value>
@@ -450,6 +474,9 @@
   <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="WPNAV_RADIUS.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="WPNAV_RADIUS.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 37</value>
   </data>
@@ -457,13 +484,13 @@
     <value>78, 20</value>
   </data>
   <data name="WPNAV_RADIUS.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;WPNAV_RADIUS.Name" xml:space="preserve">
     <value>WPNAV_RADIUS</value>
   </data>
   <data name="&gt;&gt;WPNAV_RADIUS.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;WPNAV_RADIUS.Parent" xml:space="preserve">
     <value>groupBox4</value>
@@ -481,7 +508,7 @@
     <value>68, 17</value>
   </data>
   <data name="label15.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+    <value>2</value>
   </data>
   <data name="label15.Text" xml:space="preserve">
     <value>Radius</value>
@@ -498,6 +525,9 @@
   <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="WPNAV_SPEED.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="WPNAV_SPEED.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 13</value>
   </data>
@@ -505,13 +535,13 @@
     <value>78, 20</value>
   </data>
   <data name="WPNAV_SPEED.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;WPNAV_SPEED.Name" xml:space="preserve">
     <value>WPNAV_SPEED</value>
   </data>
   <data name="&gt;&gt;WPNAV_SPEED.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;WPNAV_SPEED.Parent" xml:space="preserve">
     <value>groupBox4</value>
@@ -529,7 +559,7 @@
     <value>68, 17</value>
   </data>
   <data name="label16.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>0</value>
   </data>
   <data name="label16.Text" xml:space="preserve">
     <value>Speed </value>
@@ -547,13 +577,13 @@
     <value>9</value>
   </data>
   <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>532, 182</value>
+    <value>532, 210</value>
   </data>
   <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 131</value>
   </data>
   <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
+    <value>12</value>
   </data>
   <data name="groupBox4.Text" xml:space="preserve">
     <value>WPNav (cm's)</value>
@@ -570,6 +600,9 @@
   <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
+  <data name="THR_ALT_P.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="THR_ALT_P.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 13</value>
   </data>
@@ -577,13 +610,13 @@
     <value>78, 20</value>
   </data>
   <data name="THR_ALT_P.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;THR_ALT_P.Name" xml:space="preserve">
     <value>THR_ALT_P</value>
   </data>
   <data name="&gt;&gt;THR_ALT_P.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;THR_ALT_P.Parent" xml:space="preserve">
     <value>groupBox7</value>
@@ -601,7 +634,7 @@
     <value>14, 13</value>
   </data>
   <data name="label22.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>0</value>
   </data>
   <data name="label22.Text" xml:space="preserve">
     <value>P</value>
@@ -619,13 +652,13 @@
     <value>1</value>
   </data>
   <data name="groupBox7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 188</value>
+    <value>359, 216</value>
   </data>
   <data name="groupBox7.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 43</value>
   </data>
   <data name="groupBox7.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
+    <value>11</value>
   </data>
   <data name="groupBox7.Text" xml:space="preserve">
     <value>Altitude Hold</value>
@@ -642,6 +675,9 @@
   <data name="&gt;&gt;groupBox7.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
+  <data name="HLD_LAT_P.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="HLD_LAT_P.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 13</value>
   </data>
@@ -649,13 +685,13 @@
     <value>78, 20</value>
   </data>
   <data name="HLD_LAT_P.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;HLD_LAT_P.Name" xml:space="preserve">
     <value>HLD_LAT_P</value>
   </data>
   <data name="&gt;&gt;HLD_LAT_P.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;HLD_LAT_P.Parent" xml:space="preserve">
     <value>groupBox19</value>
@@ -673,7 +709,7 @@
     <value>14, 13</value>
   </data>
   <data name="label31.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>0</value>
   </data>
   <data name="label31.Text" xml:space="preserve">
     <value>P</value>
@@ -697,7 +733,7 @@
     <value>170, 42</value>
   </data>
   <data name="groupBox19.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
+    <value>3</value>
   </data>
   <data name="groupBox19.Text" xml:space="preserve">
     <value>Loiter PID</value>
@@ -714,6 +750,9 @@
   <data name="&gt;&gt;groupBox19.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
+  <data name="STB_YAW_P.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="STB_YAW_P.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 13</value>
   </data>
@@ -721,13 +760,13 @@
     <value>78, 20</value>
   </data>
   <data name="STB_YAW_P.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;STB_YAW_P.Name" xml:space="preserve">
     <value>STB_YAW_P</value>
   </data>
   <data name="&gt;&gt;STB_YAW_P.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;STB_YAW_P.Parent" xml:space="preserve">
     <value>groupBox20</value>
@@ -745,7 +784,7 @@
     <value>14, 13</value>
   </data>
   <data name="label35.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>0</value>
   </data>
   <data name="label35.Text" xml:space="preserve">
     <value>P</value>
@@ -769,7 +808,7 @@
     <value>170, 42</value>
   </data>
   <data name="groupBox20.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
+    <value>2</value>
   </data>
   <data name="groupBox20.Text" xml:space="preserve">
     <value>Stabilize Yaw</value>
@@ -786,6 +825,9 @@
   <data name="&gt;&gt;groupBox20.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
+  <data name="STB_PIT_P.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="STB_PIT_P.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 13</value>
   </data>
@@ -793,13 +835,13 @@
     <value>78, 20</value>
   </data>
   <data name="STB_PIT_P.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;STB_PIT_P.Name" xml:space="preserve">
     <value>STB_PIT_P</value>
   </data>
   <data name="&gt;&gt;STB_PIT_P.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;STB_PIT_P.Parent" xml:space="preserve">
     <value>groupBox21</value>
@@ -817,7 +859,7 @@
     <value>14, 13</value>
   </data>
   <data name="label42.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>0</value>
   </data>
   <data name="label42.Text" xml:space="preserve">
     <value>P</value>
@@ -841,7 +883,7 @@
     <value>170, 42</value>
   </data>
   <data name="groupBox21.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
+    <value>1</value>
   </data>
   <data name="groupBox21.Text" xml:space="preserve">
     <value>Stabilize Pitch</value>
@@ -858,6 +900,9 @@
   <data name="&gt;&gt;groupBox21.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
+  <data name="STB_RLL_P.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="STB_RLL_P.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 13</value>
   </data>
@@ -865,13 +910,13 @@
     <value>78, 20</value>
   </data>
   <data name="STB_RLL_P.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;STB_RLL_P.Name" xml:space="preserve">
     <value>STB_RLL_P</value>
   </data>
   <data name="&gt;&gt;STB_RLL_P.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;STB_RLL_P.Parent" xml:space="preserve">
     <value>groupBox22</value>
@@ -889,7 +934,7 @@
     <value>14, 13</value>
   </data>
   <data name="label46.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>0</value>
   </data>
   <data name="label46.Text" xml:space="preserve">
     <value>P</value>
@@ -913,7 +958,7 @@
     <value>170, 42</value>
   </data>
   <data name="groupBox22.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
+    <value>0</value>
   </data>
   <data name="groupBox22.Text" xml:space="preserve">
     <value>Stabilize Roll</value>
@@ -930,6 +975,60 @@
   <data name="&gt;&gt;groupBox22.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
+  <data name="RATE_YAW_FF.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RATE_YAW_FF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 110</value>
+  </data>
+  <data name="RATE_YAW_FF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 20</value>
+  </data>
+  <data name="RATE_YAW_FF.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;RATE_YAW_FF.Name" xml:space="preserve">
+    <value>RATE_YAW_FF</value>
+  </data>
+  <data name="&gt;&gt;RATE_YAW_FF.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;RATE_YAW_FF.Parent" xml:space="preserve">
+    <value>groupBox23</value>
+  </data>
+  <data name="&gt;&gt;RATE_YAW_FF.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label18.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 113</value>
+  </data>
+  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 13</value>
+  </data>
+  <data name="label18.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>FF</value>
+  </data>
+  <data name="&gt;&gt;label18.Name" xml:space="preserve">
+    <value>label18</value>
+  </data>
+  <data name="&gt;&gt;label18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
+    <value>groupBox23</value>
+  </data>
+  <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RATE_YAW_D.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RATE_YAW_D.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 60</value>
   </data>
@@ -937,19 +1036,19 @@
     <value>78, 20</value>
   </data>
   <data name="RATE_YAW_D.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;RATE_YAW_D.Name" xml:space="preserve">
     <value>RATE_YAW_D</value>
   </data>
   <data name="&gt;&gt;RATE_YAW_D.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;RATE_YAW_D.Parent" xml:space="preserve">
     <value>groupBox23</value>
   </data>
   <data name="&gt;&gt;RATE_YAW_D.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -961,7 +1060,7 @@
     <value>10, 13</value>
   </data>
   <data name="label10.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>4</value>
   </data>
   <data name="label10.Text" xml:space="preserve">
     <value>D</value>
@@ -976,7 +1075,10 @@
     <value>groupBox23</value>
   </data>
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
+  </data>
+  <data name="RATE_YAW_IMAX.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RATE_YAW_IMAX.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 84</value>
@@ -985,19 +1087,19 @@
     <value>78, 20</value>
   </data>
   <data name="RATE_YAW_IMAX.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;RATE_YAW_IMAX.Name" xml:space="preserve">
     <value>RATE_YAW_IMAX</value>
   </data>
   <data name="&gt;&gt;RATE_YAW_IMAX.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;RATE_YAW_IMAX.Parent" xml:space="preserve">
     <value>groupBox23</value>
   </data>
   <data name="&gt;&gt;RATE_YAW_IMAX.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="label47.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1009,7 +1111,7 @@
     <value>65, 13</value>
   </data>
   <data name="label47.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>6</value>
   </data>
   <data name="label47.Text" xml:space="preserve">
     <value>IMAX</value>
@@ -1024,7 +1126,10 @@
     <value>groupBox23</value>
   </data>
   <data name="&gt;&gt;label47.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
+  </data>
+  <data name="RATE_YAW_I.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RATE_YAW_I.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 37</value>
@@ -1033,19 +1138,19 @@
     <value>78, 20</value>
   </data>
   <data name="RATE_YAW_I.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;RATE_YAW_I.Name" xml:space="preserve">
     <value>RATE_YAW_I</value>
   </data>
   <data name="&gt;&gt;RATE_YAW_I.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;RATE_YAW_I.Parent" xml:space="preserve">
     <value>groupBox23</value>
   </data>
   <data name="&gt;&gt;RATE_YAW_I.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="label77.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1057,7 +1162,7 @@
     <value>10, 13</value>
   </data>
   <data name="label77.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>2</value>
   </data>
   <data name="label77.Text" xml:space="preserve">
     <value>I</value>
@@ -1072,7 +1177,10 @@
     <value>groupBox23</value>
   </data>
   <data name="&gt;&gt;label77.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
+  </data>
+  <data name="RATE_YAW_P.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RATE_YAW_P.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 13</value>
@@ -1081,19 +1189,19 @@
     <value>78, 20</value>
   </data>
   <data name="RATE_YAW_P.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;RATE_YAW_P.Name" xml:space="preserve">
     <value>RATE_YAW_P</value>
   </data>
   <data name="&gt;&gt;RATE_YAW_P.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;RATE_YAW_P.Parent" xml:space="preserve">
     <value>groupBox23</value>
   </data>
   <data name="&gt;&gt;RATE_YAW_P.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="label82.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1105,7 +1213,7 @@
     <value>14, 13</value>
   </data>
   <data name="label82.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>0</value>
   </data>
   <data name="label82.Text" xml:space="preserve">
     <value>P</value>
@@ -1120,16 +1228,16 @@
     <value>groupBox23</value>
   </data>
   <data name="&gt;&gt;label82.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="groupBox23.Location" type="System.Drawing.Point, System.Drawing">
     <value>359, 74</value>
   </data>
   <data name="groupBox23.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 108</value>
+    <value>170, 136</value>
   </data>
   <data name="groupBox23.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
+    <value>7</value>
   </data>
   <data name="groupBox23.Text" xml:space="preserve">
     <value>Rate Yaw</value>
@@ -1146,6 +1254,60 @@
   <data name="&gt;&gt;groupBox23.ZOrder" xml:space="preserve">
     <value>22</value>
   </data>
+  <data name="RATE_PIT_FF.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RATE_PIT_FF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 109</value>
+  </data>
+  <data name="RATE_PIT_FF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 20</value>
+  </data>
+  <data name="RATE_PIT_FF.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;RATE_PIT_FF.Name" xml:space="preserve">
+    <value>RATE_PIT_FF</value>
+  </data>
+  <data name="&gt;&gt;RATE_PIT_FF.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;RATE_PIT_FF.Parent" xml:space="preserve">
+    <value>groupBox24</value>
+  </data>
+  <data name="&gt;&gt;RATE_PIT_FF.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 112</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 13</value>
+  </data>
+  <data name="label14.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>FF</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>groupBox24</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RATE_PIT_D.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RATE_PIT_D.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 60</value>
   </data>
@@ -1153,19 +1315,19 @@
     <value>78, 20</value>
   </data>
   <data name="RATE_PIT_D.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;RATE_PIT_D.Name" xml:space="preserve">
     <value>RATE_PIT_D</value>
   </data>
   <data name="&gt;&gt;RATE_PIT_D.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;RATE_PIT_D.Parent" xml:space="preserve">
     <value>groupBox24</value>
   </data>
   <data name="&gt;&gt;RATE_PIT_D.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="label11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1177,7 +1339,7 @@
     <value>10, 13</value>
   </data>
   <data name="label11.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>4</value>
   </data>
   <data name="label11.Text" xml:space="preserve">
     <value>D</value>
@@ -1192,7 +1354,10 @@
     <value>groupBox24</value>
   </data>
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
+  </data>
+  <data name="RATE_PIT_IMAX.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RATE_PIT_IMAX.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 83</value>
@@ -1201,19 +1366,19 @@
     <value>78, 20</value>
   </data>
   <data name="RATE_PIT_IMAX.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;RATE_PIT_IMAX.Name" xml:space="preserve">
     <value>RATE_PIT_IMAX</value>
   </data>
   <data name="&gt;&gt;RATE_PIT_IMAX.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;RATE_PIT_IMAX.Parent" xml:space="preserve">
     <value>groupBox24</value>
   </data>
   <data name="&gt;&gt;RATE_PIT_IMAX.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="label84.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1225,7 +1390,7 @@
     <value>65, 13</value>
   </data>
   <data name="label84.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>6</value>
   </data>
   <data name="label84.Text" xml:space="preserve">
     <value>IMAX</value>
@@ -1240,7 +1405,10 @@
     <value>groupBox24</value>
   </data>
   <data name="&gt;&gt;label84.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
+  </data>
+  <data name="RATE_PIT_I.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RATE_PIT_I.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 37</value>
@@ -1249,19 +1417,19 @@
     <value>78, 20</value>
   </data>
   <data name="RATE_PIT_I.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;RATE_PIT_I.Name" xml:space="preserve">
     <value>RATE_PIT_I</value>
   </data>
   <data name="&gt;&gt;RATE_PIT_I.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;RATE_PIT_I.Parent" xml:space="preserve">
     <value>groupBox24</value>
   </data>
   <data name="&gt;&gt;RATE_PIT_I.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="label86.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1273,7 +1441,7 @@
     <value>10, 13</value>
   </data>
   <data name="label86.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>2</value>
   </data>
   <data name="label86.Text" xml:space="preserve">
     <value>I</value>
@@ -1288,7 +1456,10 @@
     <value>groupBox24</value>
   </data>
   <data name="&gt;&gt;label86.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
+  </data>
+  <data name="RATE_PIT_P.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RATE_PIT_P.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 13</value>
@@ -1297,19 +1468,19 @@
     <value>78, 20</value>
   </data>
   <data name="RATE_PIT_P.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;RATE_PIT_P.Name" xml:space="preserve">
     <value>RATE_PIT_P</value>
   </data>
   <data name="&gt;&gt;RATE_PIT_P.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;RATE_PIT_P.Parent" xml:space="preserve">
     <value>groupBox24</value>
   </data>
   <data name="&gt;&gt;RATE_PIT_P.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="label87.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1321,7 +1492,7 @@
     <value>14, 13</value>
   </data>
   <data name="label87.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>0</value>
   </data>
   <data name="label87.Text" xml:space="preserve">
     <value>P</value>
@@ -1336,16 +1507,16 @@
     <value>groupBox24</value>
   </data>
   <data name="&gt;&gt;label87.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="groupBox24.Location" type="System.Drawing.Point, System.Drawing">
     <value>183, 74</value>
   </data>
   <data name="groupBox24.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 108</value>
+    <value>170, 136</value>
   </data>
   <data name="groupBox24.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
+    <value>6</value>
   </data>
   <data name="groupBox24.Text" xml:space="preserve">
     <value>Rate Pitch</value>
@@ -1362,6 +1533,60 @@
   <data name="&gt;&gt;groupBox24.ZOrder" xml:space="preserve">
     <value>23</value>
   </data>
+  <data name="RATE_RLL_FF.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RATE_RLL_FF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 109</value>
+  </data>
+  <data name="RATE_RLL_FF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 20</value>
+  </data>
+  <data name="RATE_RLL_FF.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;RATE_RLL_FF.Name" xml:space="preserve">
+    <value>RATE_RLL_FF</value>
+  </data>
+  <data name="&gt;&gt;RATE_RLL_FF.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;RATE_RLL_FF.Parent" xml:space="preserve">
+    <value>groupBox25</value>
+  </data>
+  <data name="&gt;&gt;RATE_RLL_FF.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 112</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 13</value>
+  </data>
+  <data name="label12.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>FF</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>groupBox25</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RATE_RLL_D.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RATE_RLL_D.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 60</value>
   </data>
@@ -1369,19 +1594,19 @@
     <value>78, 20</value>
   </data>
   <data name="RATE_RLL_D.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;RATE_RLL_D.Name" xml:space="preserve">
     <value>RATE_RLL_D</value>
   </data>
   <data name="&gt;&gt;RATE_RLL_D.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;RATE_RLL_D.Parent" xml:space="preserve">
     <value>groupBox25</value>
   </data>
   <data name="&gt;&gt;RATE_RLL_D.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="label17.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1393,7 +1618,7 @@
     <value>10, 13</value>
   </data>
   <data name="label17.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>4</value>
   </data>
   <data name="label17.Text" xml:space="preserve">
     <value>D</value>
@@ -1408,7 +1633,10 @@
     <value>groupBox25</value>
   </data>
   <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
+  </data>
+  <data name="RATE_RLL_IMAX.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RATE_RLL_IMAX.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 83</value>
@@ -1417,19 +1645,19 @@
     <value>78, 20</value>
   </data>
   <data name="RATE_RLL_IMAX.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;RATE_RLL_IMAX.Name" xml:space="preserve">
     <value>RATE_RLL_IMAX</value>
   </data>
   <data name="&gt;&gt;RATE_RLL_IMAX.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;RATE_RLL_IMAX.Parent" xml:space="preserve">
     <value>groupBox25</value>
   </data>
   <data name="&gt;&gt;RATE_RLL_IMAX.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="label88.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1441,7 +1669,7 @@
     <value>68, 13</value>
   </data>
   <data name="label88.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>6</value>
   </data>
   <data name="label88.Text" xml:space="preserve">
     <value>IMAX</value>
@@ -1456,7 +1684,10 @@
     <value>groupBox25</value>
   </data>
   <data name="&gt;&gt;label88.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
+  </data>
+  <data name="RATE_RLL_I.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RATE_RLL_I.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 37</value>
@@ -1465,19 +1696,19 @@
     <value>78, 20</value>
   </data>
   <data name="RATE_RLL_I.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;RATE_RLL_I.Name" xml:space="preserve">
     <value>RATE_RLL_I</value>
   </data>
   <data name="&gt;&gt;RATE_RLL_I.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;RATE_RLL_I.Parent" xml:space="preserve">
     <value>groupBox25</value>
   </data>
   <data name="&gt;&gt;RATE_RLL_I.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="label90.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1489,7 +1720,7 @@
     <value>10, 13</value>
   </data>
   <data name="label90.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>2</value>
   </data>
   <data name="label90.Text" xml:space="preserve">
     <value>I</value>
@@ -1504,7 +1735,10 @@
     <value>groupBox25</value>
   </data>
   <data name="&gt;&gt;label90.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
+  </data>
+  <data name="RATE_RLL_P.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RATE_RLL_P.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 13</value>
@@ -1513,19 +1747,19 @@
     <value>78, 20</value>
   </data>
   <data name="RATE_RLL_P.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;RATE_RLL_P.Name" xml:space="preserve">
     <value>RATE_RLL_P</value>
   </data>
   <data name="&gt;&gt;RATE_RLL_P.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;RATE_RLL_P.Parent" xml:space="preserve">
     <value>groupBox25</value>
   </data>
   <data name="&gt;&gt;RATE_RLL_P.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="label91.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1537,7 +1771,7 @@
     <value>14, 13</value>
   </data>
   <data name="label91.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>0</value>
   </data>
   <data name="label91.Text" xml:space="preserve">
     <value>P</value>
@@ -1552,16 +1786,16 @@
     <value>groupBox25</value>
   </data>
   <data name="&gt;&gt;label91.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="groupBox25.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 74</value>
   </data>
   <data name="groupBox25.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 108</value>
+    <value>170, 136</value>
   </data>
   <data name="groupBox25.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
+    <value>5</value>
   </data>
   <data name="groupBox25.Text" xml:space="preserve">
     <value>Rate Roll</value>
@@ -1581,6 +1815,9 @@
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="LOITER_LAT_D.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="LOITER_LAT_D.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 60</value>
   </data>
@@ -1588,13 +1825,13 @@
     <value>78, 20</value>
   </data>
   <data name="LOITER_LAT_D.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;LOITER_LAT_D.Name" xml:space="preserve">
     <value>LOITER_LAT_D</value>
   </data>
   <data name="&gt;&gt;LOITER_LAT_D.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LOITER_LAT_D.Parent" xml:space="preserve">
     <value>groupBox1</value>
@@ -1612,7 +1849,7 @@
     <value>10, 13</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>4</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>D</value>
@@ -1629,6 +1866,9 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="LOITER_LAT_IMAX.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="LOITER_LAT_IMAX.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 84</value>
   </data>
@@ -1636,13 +1876,13 @@
     <value>78, 20</value>
   </data>
   <data name="LOITER_LAT_IMAX.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;LOITER_LAT_IMAX.Name" xml:space="preserve">
     <value>LOITER_LAT_IMAX</value>
   </data>
   <data name="&gt;&gt;LOITER_LAT_IMAX.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LOITER_LAT_IMAX.Parent" xml:space="preserve">
     <value>groupBox1</value>
@@ -1660,7 +1900,7 @@
     <value>65, 13</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>6</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>IMAX</value>
@@ -1677,6 +1917,9 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="LOITER_LAT_I.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="LOITER_LAT_I.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 37</value>
   </data>
@@ -1684,13 +1927,13 @@
     <value>78, 20</value>
   </data>
   <data name="LOITER_LAT_I.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;LOITER_LAT_I.Name" xml:space="preserve">
     <value>LOITER_LAT_I</value>
   </data>
   <data name="&gt;&gt;LOITER_LAT_I.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LOITER_LAT_I.Parent" xml:space="preserve">
     <value>groupBox1</value>
@@ -1708,7 +1951,7 @@
     <value>10, 13</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>2</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>I</value>
@@ -1725,6 +1968,9 @@
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="LOITER_LAT_P.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="LOITER_LAT_P.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 13</value>
   </data>
@@ -1732,13 +1978,13 @@
     <value>78, 20</value>
   </data>
   <data name="LOITER_LAT_P.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;LOITER_LAT_P.Name" xml:space="preserve">
     <value>LOITER_LAT_P</value>
   </data>
   <data name="&gt;&gt;LOITER_LAT_P.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LOITER_LAT_P.Parent" xml:space="preserve">
     <value>groupBox1</value>
@@ -1756,7 +2002,7 @@
     <value>14, 13</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>0</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>P</value>
@@ -1780,7 +2026,7 @@
     <value>170, 108</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
+    <value>8</value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
     <value>Rate Loiter</value>
@@ -1801,7 +2047,7 @@
     <value>NoControl</value>
   </data>
   <data name="BUT_rerequestparams.Location" type="System.Drawing.Point, System.Drawing">
-    <value>364, 341</value>
+    <value>364, 369</value>
   </data>
   <data name="BUT_rerequestparams.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 15, 0, 0</value>
@@ -1810,7 +2056,7 @@
     <value>103, 19</value>
   </data>
   <data name="BUT_rerequestparams.TabIndex" type="System.Int32, mscorlib">
-    <value>74</value>
+    <value>23</value>
   </data>
   <data name="BUT_rerequestparams.Text" xml:space="preserve">
     <value>Refresh Params</value>
@@ -1834,13 +2080,13 @@
     <value>NoControl</value>
   </data>
   <data name="BUT_writePIDS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>255, 341</value>
+    <value>255, 369</value>
   </data>
   <data name="BUT_writePIDS.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 19</value>
   </data>
   <data name="BUT_writePIDS.TabIndex" type="System.Int32, mscorlib">
-    <value>70</value>
+    <value>22</value>
   </data>
   <data name="BUT_writePIDS.Text" xml:space="preserve">
     <value>Write Params</value>
@@ -1858,13 +2104,13 @@
     <value>6</value>
   </data>
   <data name="myLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 260</value>
+    <value>359, 288</value>
   </data>
   <data name="myLabel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 23</value>
   </data>
   <data name="myLabel3.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
+    <value>15</value>
   </data>
   <data name="myLabel3.Text" xml:space="preserve">
     <value>Min</value>
@@ -1882,13 +2128,13 @@
     <value>7</value>
   </data>
   <data name="myLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 235</value>
+    <value>359, 263</value>
   </data>
   <data name="myLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 23</value>
   </data>
   <data name="myLabel2.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
+    <value>13</value>
   </data>
   <data name="myLabel2.Text" xml:space="preserve">
     <value>Ch6 Opt</value>
@@ -1906,13 +2152,13 @@
     <value>10</value>
   </data>
   <data name="myLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 287</value>
+    <value>359, 315</value>
   </data>
   <data name="myLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 23</value>
   </data>
   <data name="myLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
+    <value>18</value>
   </data>
   <data name="myLabel1.Text" xml:space="preserve">
     <value>Ch7 Opt</value>
@@ -1929,6 +2175,9 @@
   <data name="&gt;&gt;myLabel1.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+  <data name="THR_ACCEL_D.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="THR_ACCEL_D.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 66</value>
   </data>
@@ -1936,13 +2185,13 @@
     <value>78, 20</value>
   </data>
   <data name="THR_ACCEL_D.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;THR_ACCEL_D.Name" xml:space="preserve">
     <value>THR_ACCEL_D</value>
   </data>
   <data name="&gt;&gt;THR_ACCEL_D.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;THR_ACCEL_D.Parent" xml:space="preserve">
     <value>groupBox2</value>
@@ -1960,7 +2209,7 @@
     <value>10, 13</value>
   </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>4</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
     <value>D</value>
@@ -1987,7 +2236,7 @@
     <value>65, 13</value>
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+    <value>6</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>IMAX</value>
@@ -2004,6 +2253,9 @@
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="THR_ACCEL_IMAX.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="THR_ACCEL_IMAX.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 89</value>
   </data>
@@ -2011,19 +2263,22 @@
     <value>78, 20</value>
   </data>
   <data name="THR_ACCEL_IMAX.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;THR_ACCEL_IMAX.Name" xml:space="preserve">
     <value>THR_ACCEL_IMAX</value>
   </data>
   <data name="&gt;&gt;THR_ACCEL_IMAX.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;THR_ACCEL_IMAX.Parent" xml:space="preserve">
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;THR_ACCEL_IMAX.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="THR_ACCEL_I.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="THR_ACCEL_I.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 43</value>
@@ -2032,13 +2287,13 @@
     <value>78, 20</value>
   </data>
   <data name="THR_ACCEL_I.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;THR_ACCEL_I.Name" xml:space="preserve">
     <value>THR_ACCEL_I</value>
   </data>
   <data name="&gt;&gt;THR_ACCEL_I.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;THR_ACCEL_I.Parent" xml:space="preserve">
     <value>groupBox2</value>
@@ -2056,7 +2311,7 @@
     <value>10, 13</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+    <value>2</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
     <value>I</value>
@@ -2073,6 +2328,9 @@
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="THR_ACCEL_P.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="THR_ACCEL_P.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 19</value>
   </data>
@@ -2080,13 +2338,13 @@
     <value>78, 20</value>
   </data>
   <data name="THR_ACCEL_P.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;THR_ACCEL_P.Name" xml:space="preserve">
     <value>THR_ACCEL_P</value>
   </data>
   <data name="&gt;&gt;THR_ACCEL_P.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;THR_ACCEL_P.Parent" xml:space="preserve">
     <value>groupBox2</value>
@@ -2104,7 +2362,7 @@
     <value>14, 13</value>
   </data>
   <data name="label8.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>0</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
     <value>P</value>
@@ -2122,13 +2380,13 @@
     <value>7</value>
   </data>
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 188</value>
+    <value>7, 216</value>
   </data>
   <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 115</value>
   </data>
   <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
+    <value>9</value>
   </data>
   <data name="groupBox2.Text" xml:space="preserve">
     <value>Throttle Accel</value>
@@ -2149,7 +2407,7 @@
     <value>NoControl</value>
   </data>
   <data name="BUT_refreshpart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>473, 341</value>
+    <value>473, 369</value>
   </data>
   <data name="BUT_refreshpart.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 15, 0, 0</value>
@@ -2158,7 +2416,7 @@
     <value>103, 19</value>
   </data>
   <data name="BUT_refreshpart.TabIndex" type="System.Int32, mscorlib">
-    <value>76</value>
+    <value>24</value>
   </data>
   <data name="BUT_refreshpart.Text" xml:space="preserve">
     <value>Refresh Screen</value>
@@ -2176,13 +2434,13 @@
     <value>2</value>
   </data>
   <data name="myLabel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 314</value>
+    <value>359, 342</value>
   </data>
   <data name="myLabel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 23</value>
   </data>
   <data name="myLabel4.TabIndex" type="System.Int32, mscorlib">
-    <value>78</value>
+    <value>20</value>
   </data>
   <data name="myLabel4.Text" xml:space="preserve">
     <value>Ch8 Opt</value>
@@ -2199,20 +2457,23 @@
   <data name="&gt;&gt;myLabel4.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="CH8_OPT.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="CH8_OPT.Location" type="System.Drawing.Point, System.Drawing">
-    <value>418, 314</value>
+    <value>418, 342</value>
   </data>
   <data name="CH8_OPT.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 21</value>
   </data>
   <data name="CH8_OPT.TabIndex" type="System.Int32, mscorlib">
-    <value>77</value>
+    <value>21</value>
   </data>
   <data name="&gt;&gt;CH8_OPT.Name" xml:space="preserve">
     <value>CH8_OPT</value>
   </data>
   <data name="&gt;&gt;CH8_OPT.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.MavlinkComboBox, MissionPlanner, Version=1.1.5737.644, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CH8_OPT.Parent" xml:space="preserve">
     <value>$this</value>

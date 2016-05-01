@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using MissionPlanner.Controls;
+using MissionPlanner.Properties;
 using MissionPlanner.Utilities;
 
 namespace MissionPlanner.GCSViews
@@ -16,50 +13,65 @@ namespace MissionPlanner.GCSViews
         public Help()
         {
             InitializeComponent();
-
-
         }
 
         public void Activate()
         {
             try
             {
-                CHK_showconsole.Checked = MainV2.config["showconsole"].ToString() == "True";
+                CHK_showconsole.Checked = Settings.Instance.GetBoolean("showconsole");
             }
-            catch { }
+            catch
+            {
+            }
         }
 
         public void BUT_updatecheck_Click(object sender, EventArgs e)
         {
-            MissionPlanner.Utilities.Update.DoUpdate();
-        } 
+            try
+            {
+                Utilities.Update.CheckForUpdate(true);
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox.Show(ex.ToString(), Strings.ERROR);
+            }
+        }
 
         private void CHK_showconsole_CheckedChanged(object sender, EventArgs e)
         {
-            MainV2.config["showconsole"] = CHK_showconsole.Checked.ToString();
+            Settings.Instance["showconsole"] = CHK_showconsole.Checked.ToString();
         }
 
         private void Help_Load(object sender, EventArgs e)
         {
-            richTextBox1.Rtf = MissionPlanner.Properties.Resources.help_text;
+            richTextBox1.Rtf = Resources.help_text;
+            ThemeManager.ApplyThemeTo(richTextBox1);
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("http://firmware.diydrones.com/Tools/MissionPlanner/upgrade/ChangeLog.txt");
+            Process.Start("http://firmware.ardupilot.org/Tools/MissionPlanner/upgrade/ChangeLog.txt");
         }
 
         private void PIC_wizard_Click(object sender, EventArgs e)
         {
-            Wizard.Wizard cfg = new Wizard.Wizard();
+            var cfg = new Wizard.Wizard();
 
             cfg.ShowDialog(this);
         }
 
         private void BUT_betaupdate_Click(object sender, EventArgs e)
         {
-            MissionPlanner.Utilities.Update.dobeta = true;
-            MissionPlanner.Utilities.Update.DoUpdate();
+            try
+            {
+                Utilities.Update.dobeta = true;
+                Utilities.Update.DoUpdate();
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox.Show(ex.ToString(), Strings.ERROR);
+            }
         }
     }
 }

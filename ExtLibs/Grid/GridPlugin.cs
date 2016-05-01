@@ -20,7 +20,7 @@ namespace MissionPlanner
 
         public override string Version
         {
-            get { return "0.1"; }
+            get { return System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString(); }
         }
 
         public override string Author
@@ -48,7 +48,7 @@ namespace MissionPlanner
             int index = col.Count;
             foreach (ToolStripItem item in col)
             {
-                if (item.Text.Equals("Auto WP"))
+                if (item.Text.Equals(Strings.AutoWP))
                 {
                     index = col.IndexOf(item);
                     ((ToolStripMenuItem)item).DropDownItems.Add(but);
@@ -65,23 +65,27 @@ namespace MissionPlanner
 
         void but_Click(object sender, EventArgs e)
         {
-            var gridui = new GridUI(this);
-            MissionPlanner.Utilities.ThemeManager.ApplyThemeTo(gridui);
+            using (var gridui = new GridUI(this))
+            {
+                MissionPlanner.Utilities.ThemeManager.ApplyThemeTo(gridui);
 
-            if (Host.FPDrawnPolygon != null && Host.FPDrawnPolygon.Points.Count > 2)
-            {
-                gridui.ShowDialog();
-            }
-            else
-            {
-                if (CustomMessageBox.Show("No polygon defined. Load a file?", "Load File", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (Host.FPDrawnPolygon != null && Host.FPDrawnPolygon.Points.Count > 2)
                 {
-                    gridui.LoadGrid();
                     gridui.ShowDialog();
                 }
                 else
                 {
-                    CustomMessageBox.Show("Please define a polygon.", "Error");
+                    if (
+                        CustomMessageBox.Show("No polygon defined. Load a file?", "Load File", MessageBoxButtons.YesNo) ==
+                        DialogResult.Yes)
+                    {
+                        gridui.LoadGrid();
+                        gridui.ShowDialog();
+                    }
+                    else
+                    {
+                        CustomMessageBox.Show("Please define a polygon.", "Error");
+                    }
                 }
             }
         }

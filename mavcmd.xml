@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+
 <!-- TAGS ARE CASE SENSATIVE -->
 <CMD>
   <AC2>
@@ -18,12 +19,12 @@
       <P4></P4>
       <X>Lat</X>
       <Y>Long</Y>
-      <Z>Alt</Z>      
+      <Z>Alt</Z>
     </SPLINE_WAYPOINT>
     <LOITER_TURNS>
       <P1>Turns</P1>
       <P2></P2>
-      <P3>Dir 1=CW</P3>
+      <P3>Radius</P3>
       <P4></P4>
       <X>Lat</X>
       <Y>Long</Y>
@@ -74,24 +75,24 @@
       <Y></Y>
       <Z>Alt</Z>
     </TAKEOFF>
-    <GUIDED>
-    <P1>timeout S</P1>
+    <GUIDED_ENABLE>
+      <P1>on=1/off=0</P1>
+      <P2></P2>
+      <P3></P3>
+      <P4></P4>
+      <X></X>
+      <Y></Y>
+      <Z></Z>
+    </GUIDED_ENABLE>
+    <DO_GUIDED_LIMITS>
+      <P1>timeout S</P1>
       <P2>min alt</P2>
       <P3>max alt</P3>
       <P4>max dist</P4>
       <X></X>
       <Y></Y>
       <Z></Z>
-    </GUIDED>
-    <ROI>
-      <P1></P1>
-      <P2></P2>
-      <P3></P3>
-      <P4></P4>
-      <X>Lat</X>
-      <Y>Long</Y>
-      <Z>Alt</Z>
-    </ROI>
+    </DO_GUIDED_LIMITS>
     <DO_SET_ROI>
       <P1></P1>
       <P2></P2>
@@ -164,15 +165,15 @@
       <Y></Y>
       <Z></Z>
     </DO_GRIPPER>
-    <DO_SET_HOME>
-      <P1>Current(1)/Spec(0)</P1>
+    <DO_PARACHUTE>
+      <P1>Enable(1)/Release(2)</P1>
       <P2></P2>
       <P3></P3>
       <P4></P4>
-      <X>Lat</X>
-      <Y>Long</Y>
-      <Z>Alt</Z>
-    </DO_SET_HOME>
+      <X></X>
+      <Y></Y>
+      <Z></Z>
+    </DO_PARACHUTE>
     <DO_SET_CAM_TRIGG_DIST>
       <P1>Dist (m)</P1>
       <P2></P2>
@@ -183,8 +184,8 @@
       <Z></Z>
     </DO_SET_CAM_TRIGG_DIST>
     <DO_SET_RELAY>
-      <P1>off(0)/on(1)</P1>
-      <P2>Delay (s)</P2>
+      <P1>Relay No</P1>
+      <P2>off(0)/on(1)</P2>
       <P3></P3>
       <P4></P4>
       <X></X>
@@ -192,7 +193,7 @@
       <Z></Z>
     </DO_SET_RELAY>
     <DO_REPEAT_RELAY>
-      <P1></P1>
+      <P1>Relay No</P1>
       <P2>Repeat#</P2>
       <P3>Delay (s)</P3>
       <P4></P4>
@@ -218,19 +219,28 @@
       <Y></Y>
       <Z></Z>
     </DO_REPEAT_SERVO>
+    <DO_DIGICAM_CONFIGURE>
+      <P1>Mode</P1>
+      <P2>Shutter Speed</P2>
+      <P3>Aperture</P3>
+      <P4>ISO</P4>
+      <X>ExposureMode</X>
+      <Y>CommandID</Y>
+      <Z></Z>
+    </DO_DIGICAM_CONFIGURE>
     <DO_DIGICAM_CONTROL>
-      <P1></P1>
-      <P2></P2>
-      <P3></P3>
-      <P4></P4>
-      <X></X>
-      <Y></Y>
+      <P1>On/Off</P1>
+      <P2>Zoom Position</P2>
+      <P3>Zoom Step</P3>
+      <P4>Focus Lock</P4>
+      <X>Shutter Cmd</X>
+      <Y>CommandID</Y>
       <Z></Z>
     </DO_DIGICAM_CONTROL>
     <DO_MOUNT_CONTROL>
-      <P1></P1>
-      <P2></P2>
-      <P3></P3>
+      <P1>Pitch</P1>
+      <P2>Roll</P2>
+      <P3>Yaw</P3>
       <P4></P4>
       <X></X>
       <Y></Y>
@@ -260,8 +270,8 @@
     </LOITER_UNLIM>
     <LOITER_TURNS>
       <P1>Turns</P1>
-      <P2></P2>
-      <P3>Dir 1=CW</P3>
+      <P2>Heading req</P2>
+      <P3>Radius</P3>
       <P4></P4>
       <X>Lat</X>
       <Y>Long</Y>
@@ -269,13 +279,22 @@
     </LOITER_TURNS>
     <LOITER_TIME>
       <P1>Time s</P1>
-      <P2></P2>
+      <P2>Heading req</P2>
       <P3>Dir 1=CW</P3>
       <P4></P4>
       <X>Lat</X>
       <Y>Long</Y>
       <Z>Alt</Z>
     </LOITER_TIME>
+    <LOITER_TO_ALT>
+      <P1>Heading req</P1>
+      <P2>Radius</P2>
+      <P3></P3>
+      <P4></P4>
+      <X>Lat</X>
+      <Y>Long</Y>
+      <Z>Alt</Z>
+    </LOITER_TO_ALT>
     <RETURN_TO_LAUNCH>
       <P1></P1>
       <P2></P2>
@@ -286,7 +305,7 @@
       <Z></Z>
     </RETURN_TO_LAUNCH>
     <LAND>
-      <P1></P1>
+      <P1>Abort Alt</P1>
       <P2></P2>
       <P3></P3>
       <P4></P4>
@@ -303,6 +322,42 @@
       <Y></Y>
       <Z>Alt</Z>
     </TAKEOFF>
+    <VTOL_TAKEOFF>
+      <P1></P1>
+      <P2></P2>
+      <P3></P3>
+      <P4></P4>
+      <X></X>
+      <Y></Y>
+      <Z>Alt</Z>
+    </VTOL_TAKEOFF>
+    <VTOL_LAND>
+      <P1></P1>
+      <P2></P2>
+      <P3></P3>
+      <P4></P4>
+      <X>Lat</X>
+      <Y>Long</Y>
+      <Z>Alt</Z>
+    </VTOL_LAND>
+    <DO_VTOL_TRANSITION>
+      <P1>mode (3=mc/4=plane)</P1>
+      <P2></P2>
+      <P3></P3>
+      <P4></P4>
+      <X></X>
+      <Y></Y>
+      <Z></Z>
+    </DO_VTOL_TRANSITION>
+    <CONTINUE_AND_CHANGE_ALT>
+      <P1></P1>
+      <P2></P2>
+      <P3></P3>
+      <P4></P4>
+      <X></X>
+      <Y></Y>
+      <Z>Alt</Z>
+    </CONTINUE_AND_CHANGE_ALT>
     <CONDITION_DELAY>
       <P1>Time (sec)</P1>
       <P2></P2>
@@ -339,6 +394,24 @@
       <Y></Y>
       <Z></Z>
     </CONDITION_YAW>
+    <DO_LAND_START>
+      <P1></P1>
+      <P2></P2>
+      <P3></P3>
+      <P4></P4>
+      <X>Lat</X>
+      <Y>Long</Y>
+      <Z></Z>
+    </DO_LAND_START>
+    <DO_SET_ROI>
+      <P1></P1>
+      <P2></P2>
+      <P3></P3>
+      <P4></P4>
+      <X>Lat</X>
+      <Y>Long</Y>
+      <Z>Alt</Z>
+    </DO_SET_ROI>
     <DO_INVERTED_FLIGHT>
       <P1>0=normal, 1=inverted</P1>
       <P2></P2>
@@ -394,8 +467,8 @@
       <Z>Alt</Z>
     </DO_SET_HOME>
     <DO_SET_RELAY>
-      <P1>off(0)/on(1)</P1>
-      <P2>Delay (s)</P2>
+      <P1>Relay No</P1>
+      <P2>off(0)/on(1)</P2>
       <P3></P3>
       <P4></P4>
       <X></X>
@@ -430,21 +503,21 @@
       <Z></Z>
     </DO_REPEAT_SERVO>
     <DO_DIGICAM_CONFIGURE>
-      <P1></P1>
-      <P2></P2>
-      <P3></P3>
-      <P4></P4>
-      <X></X>
-      <Y></Y>
+      <P1>Mode</P1>
+      <P2>Shutter Speed</P2>
+      <P3>Aperture</P3>
+      <P4>ISO</P4>
+      <X>ExposureMode</X>
+      <Y>CommandID</Y>
       <Z></Z>
     </DO_DIGICAM_CONFIGURE>
     <DO_DIGICAM_CONTROL>
-      <P1></P1>
-      <P2></P2>
-      <P3></P3>
-      <P4></P4>
-      <X></X>
-      <Y></Y>
+      <P1>On/Off</P1>
+      <P2>Zoom Position</P2>
+      <P3>Zoom Step</P3>
+      <P4>Focus Lock</P4>
+      <X>Shutter Cmd</X>
+      <Y>CommandID</Y>
       <Z></Z>
     </DO_DIGICAM_CONTROL>
     <DO_MOUNT_CONFIGURE>
@@ -457,14 +530,23 @@
       <Z></Z>
     </DO_MOUNT_CONFIGURE>
     <DO_MOUNT_CONTROL>
-      <P1></P1>
+      <P1>Pitch</P1>
+      <P2>Roll</P2>
+      <P3>Yaw</P3>
+      <P4></P4>
+      <X></X>
+      <Y></Y>
+      <Z></Z>
+    </DO_MOUNT_CONTROL>
+    <DO_PARACHUTE>
+      <P1>Enable(1)/Release(2)</P1>
       <P2></P2>
       <P3></P3>
       <P4></P4>
       <X></X>
       <Y></Y>
       <Z></Z>
-    </DO_MOUNT_CONTROL>
+    </DO_PARACHUTE>
   </APM>
   <!-- -->
   <APRover>
@@ -489,7 +571,7 @@
     <LOITER_TURNS>
       <P1>Turns</P1>
       <P2></P2>
-      <P3>Dir 1=CW</P3>
+      <P3>Radius</P3>
       <P4></P4>
       <X>Lat</X>
       <Y>Long</Y>
@@ -631,8 +713,8 @@
       <Z>Alt</Z>
     </DO_SET_HOME>
     <DO_SET_RELAY>
-      <P1>off(0)/on(1)</P1>
-      <P2>Delay (s)</P2>
+      <P1>Relay No</P1>
+      <P2>off(0)/on(1)</P2>
       <P3></P3>
       <P4></P4>
       <X></X>
@@ -640,7 +722,7 @@
       <Z></Z>
     </DO_SET_RELAY>
     <DO_REPEAT_RELAY>
-      <P1></P1>
+      <P1>Relay No</P1>
       <P2>Repeat#</P2>
       <P3>Delay (s)</P3>
       <P4></P4>
@@ -694,9 +776,9 @@
       <Z></Z>
     </DO_MOUNT_CONFIGURE>
     <DO_MOUNT_CONTROL>
-      <P1></P1>
-      <P2></P2>
-      <P3></P3>
+      <P1>Pitch</P1>
+      <P2>Roll</P2>
+      <P3>Yaw</P3>
       <P4></P4>
       <X></X>
       <Y></Y>

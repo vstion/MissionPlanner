@@ -50,7 +50,10 @@ namespace MissionPlanner.Comms
         public  Parity Parity { get; set; }
         public  int DataBits { get; set; }
 
-        public string PortName { get; set; }
+        public string PortName {
+            get { return "UDP" + Port; }
+            set { }
+        }
 
         public  int BytesToRead
         {
@@ -76,8 +79,7 @@ namespace MissionPlanner.Comms
                 return;
             }
 
-            if (client != null)
-                client.Close();
+            client.Close();
 
             string dest = Port;
 
@@ -94,16 +96,16 @@ namespace MissionPlanner.Comms
             ProgressReporterDialogue frmProgressReporter = new ProgressReporterDialogue
             {
                 StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen,
-                Text = "Connecting Mavlink UDP"
+                Text = "Connecting UDP"
             };
 
             frmProgressReporter.DoWork += frmProgressReporter_DoWork;
 
-            frmProgressReporter.UpdateProgressAndStatus(-1, "Connecting Mavlink UDP");
+            frmProgressReporter.UpdateProgressAndStatus(-1, "Connecting UDP");
 
             frmProgressReporter.RunBackgroundOperationAsync();
 
-            
+            frmProgressReporter.Dispose();
         }
 
         void frmProgressReporter_DoWork(object sender, Controls.ProgressWorkerEventArgs e, object passdata = null)
@@ -199,7 +201,9 @@ namespace MissionPlanner.Comms
 
                 // prevent read past end of array
                 if ((rbuffer.Length - rbufferread) < length)
-                    return 0;
+                {
+                    length = (rbuffer.Length - rbufferread);
+                }
 
                 Array.Copy(rbuffer, rbufferread, readto, offset, length);
 

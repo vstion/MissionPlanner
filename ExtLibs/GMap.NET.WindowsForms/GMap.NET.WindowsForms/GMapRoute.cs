@@ -133,6 +133,9 @@ namespace GMap.NET.WindowsForms
             {
                GPoint p2 = LocalPoints[i];
 
+                if (Math.Abs(p2.X) > 99000 || Math.Abs(p2.Y) > 99000)
+                    Stroke.DashStyle = DashStyle.Solid;
+
                if(i == 0)
                {
                   graphicsPath.AddLine(p2.X, p2.Y, p2.X, p2.Y);
@@ -154,7 +157,64 @@ namespace GMap.NET.WindowsForms
          {
             if(graphicsPath != null)
             {
+                bool customarrows = false;
+
+                if (Stroke.DashStyle == DashStyle.Custom)
+                {
+                    customarrows = true;
+                }
+
                g.DrawPath(Stroke, graphicsPath);
+
+               if (customarrows)
+               {
+                   if (graphicsPath.PointCount > 0)
+                   {
+                       double deg2rad = Math.PI / 180.0;
+                       double rad2deg = 1 / deg2rad;
+
+                       PointF last = PointF.Empty;
+                       foreach (PointF item in graphicsPath.PathPoints)
+                       {
+                           if (last == PointF.Empty)
+                           {
+                               last = item;
+                               continue;
+                           }
+
+                           float polx = item.X - last.X;
+                           float poly = item.Y - last.Y;
+
+                           // distance
+                           double r = Math.Sqrt(Math.Pow(polx, 2) + Math.Pow(poly, 2));
+
+                           if (r <= 20)
+                               continue;
+
+                           // angle
+                           double angle = Math.Atan2(poly, polx);
+
+                           if (double.IsNaN(angle))
+                               continue;
+
+                           float midx = polx / 2;
+                           float midy = poly / 2;
+
+                           float midxstart = last.X + midx;
+                           float midystart = last.Y + midy;
+
+                           double leftangle = angle + 210 * deg2rad;
+                           double rightangle = angle - 210 * deg2rad;
+
+                           float length = 15;
+
+                           g.DrawLine(Stroke, midxstart, midystart, midxstart + length * (float)Math.Cos(leftangle), midystart + length * (float)Math.Sin(leftangle));
+                           g.DrawLine(Stroke, midxstart, midystart, midxstart + length * (float)Math.Cos(rightangle), midystart + length * (float)Math.Sin(rightangle));
+
+                           last = item;
+                       }
+                   }
+               }
             }
          }
 #else

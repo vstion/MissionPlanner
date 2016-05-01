@@ -36,11 +36,7 @@ namespace MissionPlanner
         List<PointLatLng> list = new List<PointLatLng>();
         List<PointLatLngAlt> grid;
 
-        mode currentmode = mode.panmode;
-
-        //
-        camerainfo camera;
-        
+        mode currentmode = mode.panmode;       
 
         Dictionary<string, camerainfo> cameras = new Dictionary<string, camerainfo>();
 
@@ -191,17 +187,19 @@ namespace MissionPlanner
         {
             System.Xml.Serialization.XmlSerializer reader = new System.Xml.Serialization.XmlSerializer(typeof(GridData));
 
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "*.grid|*.grid";
-            ofd.ShowDialog();
-
-            if (File.Exists(ofd.FileName))
+            using (OpenFileDialog ofd = new OpenFileDialog())
             {
-                using (StreamReader sr = new StreamReader(ofd.FileName))
-                {
-                    var test = (GridData)reader.Deserialize(sr);
+                ofd.Filter = "*.grid|*.grid";
+                ofd.ShowDialog();
 
-                    loadgriddata(test);
+                if (File.Exists(ofd.FileName))
+                {
+                    using (StreamReader sr = new StreamReader(ofd.FileName))
+                    {
+                        var test = (GridData)reader.Deserialize(sr);
+
+                        loadgriddata(test);
+                    }
                 }
             }
         }
@@ -212,15 +210,17 @@ namespace MissionPlanner
 
             var griddata = savegriddata();
 
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "*.grid|*.grid";
-            sfd.ShowDialog();
-
-            if (sfd.FileName != "")
+            using (SaveFileDialog sfd = new SaveFileDialog())
             {
-                using (StreamWriter sw = new StreamWriter(sfd.FileName))
+                sfd.Filter = "*.grid|*.grid";
+                sfd.ShowDialog();
+
+                if (sfd.FileName != "")
                 {
-                    writer.Serialize(sw, griddata);
+                    using (StreamWriter sw = new StreamWriter(sfd.FileName))
+                    {
+                        writer.Serialize(sw, griddata);
+                    }
                 }
             }
         }
@@ -296,7 +296,7 @@ namespace MissionPlanner
 
             boxpoly.Points.ForEach(x => { newlist.Add(x); });
 
-            grid = Grid.CreateGrid(newlist, (double)NUM_altitude.Value, (double)NUM_Distance, (double)NUM_spacing, (double)NUM_angle.Value, 0, 0, Grid.StartPosition.Home, false);
+            grid = Grid.CreateGrid(newlist, (double)NUM_altitude.Value, (double)NUM_Distance, (double)NUM_spacing, (double)NUM_angle.Value, 0, 0, Grid.StartPosition.Home, false, 0);
 
             List<PointLatLng> list2 = new List<PointLatLng>();
 
@@ -334,35 +334,40 @@ namespace MissionPlanner
                     }
                     try
                     {
-                        if (TXT_fovH != "")
+                        if (chk_footprints.Checked)
                         {
-                            double fovh = double.Parse(TXT_fovH);
-                            double fovv = double.Parse(TXT_fovV);
-
-                            double startangle = 0;
-
-                            if (!RAD_camdirectionland.Checked)
+                            if (TXT_fovH != "")
                             {
-                                startangle = 90;
-                            }
+                                double fovh = double.Parse(TXT_fovH);
+                                double fovv = double.Parse(TXT_fovV);
 
-                            double angle1 = startangle - (Math.Tan((fovv / 2.0) / (fovh / 2.0)) * rad2deg);
-                            double dist1 = Math.Sqrt(Math.Pow(fovh / 2.0, 2) + Math.Pow(fovv / 2.0, 2));
+                                double startangle = 0;
 
-                            double bearing = (double)NUM_angle.Value;// (prevpoint.GetBearing(item) + 360.0) % 360;
+                                if (!RAD_camdirectionland.Checked)
+                                {
+                                    startangle = 90;
+                                }
 
-                            List<PointLatLng> footprint = new List<PointLatLng>();
-                            footprint.Add(item.newpos(bearing + angle1, dist1));
-                            footprint.Add(item.newpos(bearing + 180 - angle1, dist1));
-                            footprint.Add(item.newpos(bearing + 180 + angle1, dist1));
-                            footprint.Add(item.newpos(bearing - angle1, dist1));
+                                double angle1 = startangle - (Math.Tan((fovv/2.0)/(fovh/2.0))*rad2deg);
+                                double dist1 = Math.Sqrt(Math.Pow(fovh/2.0, 2) + Math.Pow(fovv/2.0, 2));
 
-                            GMapPolygon poly = new GMapPolygon(footprint, a.ToString());
-                            poly.Stroke.Color = Color.FromArgb(250 - ((a * 5) % 240), 250 - ((a * 3) % 240), 250 - ((a * 9) % 240));
-                            poly.Stroke.Width = 1;
-                            poly.Fill = new SolidBrush(Color.FromArgb(40, Color.Purple));
-                            if (chk_footprints.Checked)
+                                double bearing = (double) NUM_angle.Value;
+                                    // (prevpoint.GetBearing(item) + 360.0) % 360;
+
+                                List<PointLatLng> footprint = new List<PointLatLng>();
+                                footprint.Add(item.newpos(bearing + angle1, dist1));
+                                footprint.Add(item.newpos(bearing + 180 - angle1, dist1));
+                                footprint.Add(item.newpos(bearing + 180 + angle1, dist1));
+                                footprint.Add(item.newpos(bearing - angle1, dist1));
+
+                                GMapPolygon poly = new GMapPolygon(footprint, a.ToString());
+                                poly.Stroke.Color = Color.FromArgb(250 - ((a*5)%240), 250 - ((a*3)%240),
+                                    250 - ((a*9)%240));
+                                poly.Stroke.Width = 1;
+                                poly.Fill = new SolidBrush(Color.FromArgb(40, Color.Purple));
+
                                 layerpolygons.Polygons.Add(poly);
+                            }
                         }
                     }
                     catch { }
@@ -729,8 +734,6 @@ namespace MissionPlanner
                                 case "xml":
                                     break;
                                 default:
-                                    if (xmlreader.Name == "") // line feeds
-                                        break;
                                     break;
                             }
                         }
@@ -1014,17 +1017,6 @@ namespace MissionPlanner
                     layerpolygons.Markers.Clear();
                     layerpolygons.Markers.Add(new GMarkerGoogle(bestp0, GMarkerGoogleType.blue));
                     layerpolygons.Markers.Add(new GMarkerGoogle(bestp1, GMarkerGoogleType.blue));
-
-                    if (bestcrosstrack > 0) 
-                    {
-                        bearing += 90;
-                        bearing = (bearing + 360) % 360;
-                    }
-                    else
-                    {
-                        bearing -= 90;
-                        bearing = (bearing + 360) % 360;
-                    }
 
                     bearing = ((PointLatLngAlt)mousestart).GetBearing(mousecurrent);
 

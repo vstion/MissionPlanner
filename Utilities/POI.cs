@@ -21,9 +21,22 @@ namespace MissionPlanner.Utilities
 
         public static event EventHandler POIModified;
 
+        public static void POIAdd(PointLatLngAlt Point, string tag)
+        {
+            // local copy
+            PointLatLngAlt pnt = Point;
+
+            pnt.Tag = tag + "\n" + pnt.ToString();
+
+            POI.POIs.Add(pnt);
+
+            if (POIModified != null)
+                POIModified(null, null);
+        }
+
         public static void POIAdd(PointLatLngAlt Point)
         {
-              if (Point == null)
+            if (Point == null)
                 return;
 
             PointLatLngAlt pnt = Point;
@@ -33,22 +46,17 @@ namespace MissionPlanner.Utilities
             if (DialogResult.OK != InputBox.Show("POI", "Enter ID", ref output))
                 return;
 
-            pnt.Tag = output + "\n" + pnt.ToString();
-
-            POI.POIs.Add(pnt);
-
-            if (POIModified != null)
-                POIModified(null, null);
+            POIAdd(Point, output);
         }
 
-        public static void POIDelete(PointLatLngAlt Point)
+        public static void POIDelete(GMapMarkerPOI Point)
         {
             if (Point == null)
                 return;
 
             for (int a = 0; a < POI.POIs.Count; a++)
             {
-                if (POI.POIs[a].Point() == Point)
+                if (POI.POIs[a].Point() == Point.Position)
                 {
                     POI.POIs.RemoveAt(a);
                     if (POIModified != null)
@@ -58,7 +66,7 @@ namespace MissionPlanner.Utilities
             }
         }
 
-        public static void POIEdit(PointLatLngAlt Point)
+        public static void POIEdit(GMapMarkerPOI Point)
         {
             if (Point == null)
                 return;
@@ -70,9 +78,9 @@ namespace MissionPlanner.Utilities
 
             for (int a = 0; a < POI.POIs.Count; a++)
             {
-                if (POI.POIs[a].Point() == Point)
+                if (POI.POIs[a].Point() == Point.Position)
                 {
-                    POI.POIs[a].Tag = output + "\n" + Point.ToString();
+                    POI.POIs[a].Tag = output + "\n" + Point.Position.ToString();
                     if (POIModified != null)
                         POIModified(null, null);
                     return;
@@ -80,20 +88,62 @@ namespace MissionPlanner.Utilities
             }
         }
 
+        public static void POIMove(GMapMarkerPOI Point)
+        {
+            for (int a = 0; a < POI.POIs.Count; a++)
+            {
+                if (POIs[a].Tag == Point.ToolTipText)
+                {
+                    POIs[a].Lat = Point.Position.Lat;
+                    POIs[a].Lng = Point.Position.Lng;
+                    POIs[a].Tag = POIs[a].Tag.Substring(0,POIs[a].Tag.IndexOf('\n')) + "\n" + Point.Position.ToString();
+                    break;
+                }
+            }
+
+            if (POIModified != null)
+                POIModified(null, null);
+        }
+
         public static void POISave()
         {
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "Poi File|*.txt";
-
-            if (sfd.ShowDialog() == DialogResult.OK)
+            using (SaveFileDialog sfd = new SaveFileDialog())
             {
-                using (Stream file = sfd.OpenFile())
+                sfd.Filter = "Poi File|*.txt";
+
+                if (sfd.ShowDialog() == DialogResult.OK)
                 {
-                    foreach (var item in POI.POIs)
+                    using (Stream file = sfd.OpenFile())
                     {
-                        string line = item.Lat.ToString(CultureInfo.InvariantCulture) + "\t" + item.Lng.ToString(CultureInfo.InvariantCulture) + "\t" + item.Tag + "\r\n";
-                        byte[] buffer = ASCIIEncoding.ASCII.GetBytes(line);
-                        file.Write(buffer, 0, buffer.Length);
+                        foreach (var item in POI.POIs)
+                        {
+                            string line = item.Lat.ToString(CultureInfo.InvariantCulture) + "\t" +
+                                          item.Lng.ToString(CultureInfo.InvariantCulture) + "\t" + item.Tag + "\r\n";
+                            byte[] buffer = ASCIIEncoding.ASCII.GetBytes(line);
+                            file.Write(buffer, 0, buffer.Length);
+                        }
+                    }
+                }
+            }
+        }
+
+        public static void POILoad()
+        {
+            using (OpenFileDialog sfd = new OpenFileDialog())
+            {
+                sfd.Filter = "Poi File|*.txt";
+
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    using (Stream file = sfd.OpenFile())
+                    {
+                        using (StreamReader sr = new StreamReader(file))
+                        {
+                            string[] items = sr.ReadLine().Split('\t');
+
+                            POIAdd(new PointLatLngAlt(double.Parse(items[0], CultureInfo.InvariantCulture)
+                                    , double.Parse(items[1], CultureInfo.InvariantCulture)), items[2]);
+                        }
                     }
                 }
             }
@@ -108,7 +158,11 @@ namespace MissionPlanner.Utilities
 
             foreach (var pnt in POIs)
             {
-                poioverlay.Markers.Add(new GMarkerGoogle(pnt, GMarkerGoogleType.red_dot) { ToolTipMode = MarkerTooltipMode.OnMouseOver, ToolTipText = pnt.Tag });
+                poioverlay.Markers.Add(new GMapMarkerPOI(pnt)
+                {
+                    ToolTipMode = MarkerTooltipMode.OnMouseOver,
+                    ToolTipText = pnt.Tag
+                });
             }
         }
     }

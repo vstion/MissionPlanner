@@ -18,83 +18,143 @@ namespace MissionPlanner.Log
             {
                 FileInfo info = new FileInfo(logfile);
 
+                // delete 0 size files
                 if (info.Length == 0)
                 {
                     try
                     {
                         File.Delete(logfile);
                     }
-                    catch { }
+                    catch
+                    {
+                    }
                     continue;
                 }
 
+                // move small logs - most likerly invalid
                 if (info.Length <= 1024)
                 {
                     try
                     {
                         string destdir = Path.GetDirectoryName(logfile) + Path.DirectorySeparatorChar
-                 + "SMALL" + Path.DirectorySeparatorChar;
+                                         + "SMALL" + Path.DirectorySeparatorChar;
 
                         if (!Directory.Exists(destdir))
                             Directory.CreateDirectory(destdir);
 
                         log.Info("Move log small " + logfile + " to " + destdir + Path.GetFileName(logfile));
 
-                        File.Move(logfile, destdir + Path.GetFileName(logfile));
-                        File.Move(logfile.Replace(".tlog", ".rlog"), destdir + Path.GetFileName(logfile).Replace(".tlog", ".rlog"));
+                        movefileusingmask(logfile, destdir);
                     }
-                    catch { }
+                    catch
+                    {
+                    }
                     continue;
                 }
 
-                MAVLinkInterface mine = new MAVLinkInterface();
-
                 try
                 {
-                    using (mine.logplaybackfile = new BinaryReader(File.Open(logfile, FileMode.Open, FileAccess.Read, FileShare.Read)))
+                    using (MAVLinkInterface mine = new MAVLinkInterface())
+                    using (
+                        mine.logplaybackfile =
+                            new BinaryReader(File.Open(logfile, FileMode.Open, FileAccess.Read, FileShare.Read)))
                     {
                         mine.logreadmode = true;
 
-                        byte[] hbpacket = mine.getHeartBeat();
+                        var midpoint = mine.logplaybackfile.BaseStream.Length / 2;
 
-                        if (hbpacket.Length == 0)
+                        mine.logplaybackfile.BaseStream.Seek(midpoint, SeekOrigin.Begin);
+
+                        MAVLink.MAVLinkMessage hbpacket = mine.getHeartBeat();
+                        MAVLink.MAVLinkMessage hbpacket1 = mine.getHeartBeat();
+                        MAVLink.MAVLinkMessage hbpacket2 = mine.getHeartBeat();
+                        MAVLink.MAVLinkMessage hbpacket3 = mine.getHeartBeat();
+
+                        if (hbpacket.Length == 0 && hbpacket1.Length == 0 && hbpacket2.Length == 0 && hbpacket3.Length == 0)
                         {
                             mine.logreadmode = false;
                             mine.logplaybackfile.Close();
 
                             if (!Directory.Exists(Path.GetDirectoryName(logfile) + Path.DirectorySeparatorChar + "BAD"))
-                                Directory.CreateDirectory(Path.GetDirectoryName(logfile) + Path.DirectorySeparatorChar + "BAD");
+                                Directory.CreateDirectory(Path.GetDirectoryName(logfile) + Path.DirectorySeparatorChar +
+                                                          "BAD");
 
-                            log.Info("Move log bad " + logfile + " to " + Path.GetDirectoryName(logfile) + Path.DirectorySeparatorChar + "BAD" + Path.DirectorySeparatorChar + Path.GetFileName(logfile));
+                            log.Info("Move log bad " + logfile + " to " + Path.GetDirectoryName(logfile) +
+                                     Path.DirectorySeparatorChar + "BAD" + Path.DirectorySeparatorChar +
+                                     Path.GetFileName(logfile));
 
-                            File.Move(logfile, Path.GetDirectoryName(logfile) + Path.DirectorySeparatorChar + "BAD" + Path.DirectorySeparatorChar + Path.GetFileName(logfile));
+                            movefileusingmask(logfile,
+                                Path.GetDirectoryName(logfile) + Path.DirectorySeparatorChar + "BAD" +
+                                Path.DirectorySeparatorChar);
                             continue;
                         }
 
-                        MAVLink.mavlink_heartbeat_t hb = (MAVLink.mavlink_heartbeat_t)mine.DebugPacket(hbpacket);
+                        if (hbpacket.Length != 0)
+                        {
+                            MAVLink.mavlink_heartbeat_t hb = (MAVLink.mavlink_heartbeat_t) mine.DebugPacket(hbpacket);
+                        }
+
+                        if (hbpacket1.Length != 0)
+                        {
+                            MAVLink.mavlink_heartbeat_t hb1 = (MAVLink.mavlink_heartbeat_t)mine.DebugPacket(hbpacket1);
+                        }
+
+                        if (hbpacket2.Length != 0)
+                        {
+                            MAVLink.mavlink_heartbeat_t hb2 = (MAVLink.mavlink_heartbeat_t)mine.DebugPacket(hbpacket2);
+                        }
+
+                        if (hbpacket3.Length != 0)
+                        {
+                            MAVLink.mavlink_heartbeat_t hb3 = (MAVLink.mavlink_heartbeat_t)mine.DebugPacket(hbpacket3);
+                        }
+
+                        // find most appropriate
+                        if (mine.MAVlist.Count > 1)
+                        {
+                            foreach (var mav in mine.MAVlist.GetMAVStates())
+                            {
+                                if (mav.aptype == MAVLink.MAV_TYPE.ANTENNA_TRACKER)
+                                    continue;
+                                if (mav.aptype == MAVLink.MAV_TYPE.GCS)
+                                    continue;
+
+                                mine.sysidcurrent = mav.sysid;
+                                mine.compidcurrent = mav.compid;
+                            }
+                        }
 
                         mine.logreadmode = false;
                         mine.logplaybackfile.Close();
 
                         string destdir = Path.GetDirectoryName(logfile) + Path.DirectorySeparatorChar
-                            + mine.MAV.aptype.ToString() + Path.DirectorySeparatorChar
-                            + hbpacket[3] + Path.DirectorySeparatorChar;
+                                         + mine.MAV.aptype.ToString() + Path.DirectorySeparatorChar
+                                         + mine.MAV.sysid + Path.DirectorySeparatorChar;
 
                         if (!Directory.Exists(destdir))
                             Directory.CreateDirectory(destdir);
 
-                        log.Info("Move log " + logfile + " to " + destdir + Path.GetFileName(logfile));
-
-                        File.Move(logfile, destdir + Path.GetFileName(logfile));
-
-                        try
-                        {
-                            File.Move(logfile.Replace(".tlog", ".rlog"), destdir + Path.GetFileName(logfile).Replace(".tlog", ".rlog"));
-                        }
-                        catch { }
+                        movefileusingmask(logfile, destdir);
                     }
                 }
-                catch { continue; }
+                catch
+                {
+                    continue;
+                }
+            }
+        }
+
+        static void movefileusingmask(string logfile, string destdir)
+        {
+            string dir = Path.GetDirectoryName(logfile);
+            string filter = Path.GetFileNameWithoutExtension(logfile) + "*";
+
+            string[] files = Directory.GetFiles(dir, filter);
+            foreach (var file in files)
+            {
+                log.Info("Move log " + file + " to " + destdir + Path.GetFileName(file));
+
+                File.Move(file, destdir + Path.GetFileName(file));
             }
         }
     }

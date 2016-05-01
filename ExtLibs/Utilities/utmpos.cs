@@ -53,7 +53,7 @@ namespace MissionPlanner.Utilities
             return a.ToLLA();
         }
 
-        public PointLatLngAlt ToLLA()
+        public PointLatLngAlt ToLLA2()
         {
             GeoUtility.GeoSystem.UTM utm = new GeoUtility.GeoSystem.UTM(Math.Abs(zone), x, y, zone < 0 ? GeoUtility.GeoSystem.Base.Geocentric.Hemisphere.South : GeoUtility.GeoSystem.Base.Geocentric.Hemisphere.North);
 
@@ -62,8 +62,10 @@ namespace MissionPlanner.Utilities
                 ans.Tag = this.Tag.ToString();
 
             return ans;
+        }
 
-            /*
+        public PointLatLngAlt ToLLA()
+        {
             IProjectedCoordinateSystem utm = ProjectedCoordinateSystem.WGS84_UTM(Math.Abs(zone), zone < 0 ? false : true);
 
             ICoordinateTransformation trans = ctfac.CreateFromCoordinateSystems(wgs84, utm);
@@ -76,7 +78,6 @@ namespace MissionPlanner.Utilities
                 ans.Tag = this.Tag.ToString();
 
             return ans;
-             */
         }
 
         public static List<utmpos> ToList(List<double[]> input, int zone)
@@ -115,6 +116,17 @@ namespace MissionPlanner.Utilities
         public override string ToString()
         {
             return "utmpos: " + x + "," + y;
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int hashCode = x.GetHashCode();
+                hashCode = (hashCode * 397) ^ y.GetHashCode();
+                hashCode = (hashCode * 397) ^ zone;
+                return hashCode;
+            }
         }
 
         public bool IsZero { get { if (this == Zero) return true; return false; } }
